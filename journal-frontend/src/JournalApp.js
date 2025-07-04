@@ -149,7 +149,7 @@ function JournalApp() {
       <div className="min-h-screen bg-[#f9f9f9] text-gray-900 dark:bg-gray-900 dark:text-white transition-colors duration-300">
    <div className="max-w-xl mx-auto px-4">
   <div className="flex justify-between items-center mb-6">
-    <h1 className="text-2xl font-semibold tracking-tight">📓 Journal </h1>
+    <h1 className="text-2xl font-semibold tracking-tight">📓 MindFlow</h1>
     <button
       onClick={() => {
          setDarkMode(prev =>{
