@@ -318,7 +318,7 @@ function JournalApp() {
 
           <div style ={{marginTop: 10}}>
             <button onClick={() => startEditing(entry)}>Edit</button>
-              <button onClick={() => handleDeleteClick(entry.id)} style={{ marginLeft: 8, color: 'red' }}>
+              <button onClick={() => handleDeleteClick(entry)} style={{ marginLeft: 8, color: 'red' }}>
                 Delete
               </button>
          </div>
