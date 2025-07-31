@@ -5,6 +5,8 @@ import { useState, useEffect } from 'react';
 import "./index.css";
 import axios from 'axios';
 
+const BASE_URL = 'https://journal-app-bh4k.onrender.com'
+
 function JournalApp() {
   const [entries, setEntries] = useState([]);
   const [title, setTitle] = useState('');
@@ -35,7 +37,7 @@ function JournalApp() {
 
   const fetchEntries = async () => {
     try {
-      const res = await axios.get('http://127.0.0.1:8000/api/entries/');
+      const res = await axios.get(`${BASE_URL}/api/entries/`);
 
       const normalizedEntries = res.data.map(entry => ({
         ...entry,
@@ -50,7 +52,7 @@ function JournalApp() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('http://127.0.0.1:8000/api/entries/', {title,content});
+      await axios.post(`${BASE_URL}/api/entries/`, {title,content});
       setTitle('');
       setContent('');
       fetchEntries();
@@ -72,7 +74,7 @@ function JournalApp() {
 
   const handleSave = async (id) => {
    try {
-    await axios.put(`http://127.0.0.1:8000/api/entries/${id}/`, {
+    await axios.put(`${BASE_URL}/api/entries/${id}/`, {
       title: editTitle,
       content: editContent,
     });
@@ -87,7 +89,7 @@ function JournalApp() {
       if(!entryToDelete) return;
 
       try{
-        await axios.delete(`http://127.0.0.1:8000/api/entries/${entryToDelete.id}/`);
+        await axios.delete(`${BASE_URL}/api/entries/${entryToDelete.id}/`);
         fetchEntries();
       } catch (err) {
         console.error("Error deleting entry:", err);

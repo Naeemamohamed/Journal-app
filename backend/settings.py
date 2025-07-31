@@ -41,7 +41,7 @@ ALLOWED_HOSTS = ['*']  # Or specify your Render domain
 
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",  # Your React dev server
-    # "https://your-react-app.onrender.com",  # Your React production URL
+    "https://journal-app-bh4k.onrender.com",  # Your React production URL
 ]
 
 # Or for development, you can use:
