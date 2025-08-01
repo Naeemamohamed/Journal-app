@@ -41,7 +41,7 @@ ALLOWED_HOSTS = ['*']  # Or specify your Render domain
 
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",  # Your React dev server
-    "https://journal-frontend-peach.vercel.app",  # Your React production URL
+    "https://journal-frontend-six.vercel.app",  # Your React production URL
 ]
 
 # Or for development, you can use:
